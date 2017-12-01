@@ -1,5 +1,6 @@
 var App = angular.module('App',[
-    'ngRoute'
+    'ngRoute',
+    'infinite-scroll'
 ])
     .config(
         ['$routeProvider',function ($routeProvider) {

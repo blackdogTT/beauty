@@ -1,4 +1,97 @@
+
 <div ng-include="'template/nav.html'"></div>
 
 <!--李峰-->
-<h1>分类</h1>
+
+<style>
+    #lf .sec_nav{
+        position : fixed;
+        top : 0;
+        list-style : none;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        width: 100%;
+        border-bottom:1px solid #ccc;
+        z-index: 100;
+        background-color: #eee;
+    }
+    #lf .sec_nav ul li{
+        width : 110px;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+    }
+    #lf .sec_nav ul>li.active a{
+        color : #f36;
+        border-bottom : 2px solid #f36;
+    }
+
+    #lf .sec_nav ul>li>a:hover{
+        color : #f36;
+        border-bottom : 2px solid #f36;
+    }
+    #lf .sec_nav ul li a{
+        background: none;
+        border-radius: 0;
+        display: block;
+        height: 38px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #333;
+    }
+
+    #lf {
+        background: #eee;
+    }
+</style>
+
+<div id="lf">
+    <!--导航条-->
+    <div class="sec_nav">
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="">首页</a></li>
+            <li role="presentation"><a href="javascript:;">上衣</a></li>
+            <li role="presentation"><a href="#">裙子</a></li>
+            <li role="presentation"><a href="#">裤子</a></li>
+            <li role="presentation"><a href="#">女鞋</a></li>
+            <li role="presentation"><a href="#">包包</a></li>
+            <li role="presentation"><a href="#">配饰</a></li>
+            <li role="presentation"><a href="#">美妆</a></li>
+            <li role="presentation"><a href="#">男友</a></li>
+            <li role="presentation"><a href="#">童装</a></li>
+            <li role="presentation"><a href="#">家居</a></li>
+        </ul>
+    </div>
+    <!--轮播图-->
+    <div id="body_top" class="hidden-sm hidden-xs">
+        <div class="top-img">
+            <img src="images/Carousel-1.jpg" alt="">
+        </div>
+    </div>
+    <!--图片排列-->
+    <div class="category_container" infinite-scroll="myPagingFunction()" infinite-scroll-distance="1">
+        <div class="category_item" ng-repeat="item in data track by $index">
+            <div class="category_item-curtain">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gouwuche1"></use>
+                </svg>
+            </div>
+            <img src="{{item.imageSrc}}" alt="">
+            <div class="content-text">
+                <p class="price">
+                    ￥{{item.price}}
+                </p>
+                <p class="title">
+                    <img src="images/youxuan.png" alt="">
+                    {{item.description}}
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

@@ -47,6 +47,7 @@
         background-color: #ff3366;
         border-color: #ff3366;
     }
+
     #yjj .cart-fullCart{
         width: 1200px;
         padding: 20px 26px;
@@ -59,6 +60,7 @@
         border-bottom: 1px solid #ddd;
         margin: 0;
     }
+
     #yjj .cart-header>div{
         height: 49px;
         text-align: center;
@@ -72,6 +74,7 @@
         line-height: 60px;
         text-align: center;
     }
+
     #yjj .cart-type .col-md-1{
         height: 60px;
         padding: 0;
@@ -87,6 +90,7 @@
         border-top: 1px solid #ddd;
         text-align: center;
     }
+
     #yjj .cart-item>div{
         padding: 0;
     }
@@ -97,7 +101,7 @@
             <img src="images/cart-beauty-logo.png" alt="">
         </div>
     </div>
-    <div class="cart-emptyCart" hidden>
+    <div class="cart-emptyCart">
         <h4>
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-gouwuche1"></use>
@@ -106,20 +110,21 @@
         </h4>
         <a href="#/home" class="btn btn-primary">返回首页</a>
     </div>
-    <div class="cart-fullCart">
+    <div class="cart-fullCart" hidden>
+        <!--表头-->
         <div class="cart-header row" >
             <div class="col-md-1">
                 <input type="checkbox">
                 全选
             </div>
             <div class="col-md-6">商品</div>
-            <div class="col-md-1">商品信息</div>
             <div class="col-md-1">单价（元）</div>
-            <div class="col-md-1">数量</div>
+            <div class="col-md-2">数量</div>
             <div class="col-md-1">小计（元）</div>
             <div class="col-md-1">操作</div>
         </div>
 
+        <!--列表-->
         <div class="cart-category">
             <div class="cart-type" >
                 <div class="col-md-1">
@@ -127,7 +132,7 @@
                     <span>类型</span>
                 </div>
                 <div class="col-md-2">
-                    <span>男友</span>
+                    <strong>男友</strong>
                 </div>
             </div>
             <div class="cart-item row">
@@ -139,11 +144,8 @@
                     <img src="http://s3.mogucdn.com/mlcdn/917393/171013_8526kg9a4jcjke08ifkbh142jec4c_1600x2250.jpg_100x100.jpg" alt="">
                     <span>【买手款】秋冬新款黑色修身显瘦铅笔牛仔裤刺绣女长裤小脚裤</span>
                 </div>
-                <div class="col-md-1">
-                    <span>颜色：黑</span>
-                </div>
                 <div class="col-md-1">79</div>
-                <div class="col-md-1">
+                <div class="col-md-2">
                     <span class="cart-operate">+</span>
                     <span>1</span>
                     <span class="cart-operate">-</span>
@@ -153,5 +155,7 @@
             </div>
         </div>
 
+        <!--结算-->
+        <div class=""></div>
     </div>
 </div>
